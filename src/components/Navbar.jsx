@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State to manage menu toggle
 
   useEffect(() => {
     const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -16,7 +17,16 @@ export default function Navbar() {
           <div className="logo">
             <span className="logo-text">Suraj Sah</span>
           </div>
-          <ul className="nav-items">
+          
+          {/* Hamburger Icon for mobile view */}
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+            <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+            <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+          </div>
+
+          {/* Navigation items */}
+          <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
           </ul>

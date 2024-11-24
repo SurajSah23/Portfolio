@@ -11,7 +11,7 @@ const Projects = () => {
 
     return (
         <div id="projects" className="projects">
-            <h2>My Projects</h2>
+            <h1>My Projects</h1>
             <div className="projects-list">
                 {projects.map((project, index) => (
                     <div className="project-card" key={index}>

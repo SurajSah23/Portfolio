@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import GraphicDesigning from './components/GraphicDesigning';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       <Hero />
       <Skills />
       <Projects />
+      <GraphicDesigning />
     </div>
   );
 }

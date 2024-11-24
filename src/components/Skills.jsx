@@ -1,7 +1,7 @@
 import './Skills.css';
 
 const Skills = () => {
-    const skills = ['React.js', 'MongoDB', 'DBMS', 'HTML', 'CSS', 'JavaScript', 'Postman API', 'Node.js', 'Express.js', 'Tailwind CSS', 'Bootstrap', 'Python'];
+    const skills = ['React.js', 'MongoDB', 'DBMS', 'HTML', 'CSS', 'JavaScript', 'Postman API', 'Node.js', 'Express.js', 'Tailwind CSS', 'Bootstrap', 'Python', 'Graphic Designing'];
 
     return (
         <div id="skills" className="skills">
