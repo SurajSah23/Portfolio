@@ -1,0 +1,116 @@
+/* General styling for navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Dark mode styling */
+  .navbar.dark {
+    background-color: #1a202c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Container for positioning navbar items */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Inner div for logo and nav items */
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar.dark .logo {
+    color: #f7fafc;
+  }
+  
+  /* Logo text hover effect */
+  .logo-text {
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .logo-text:hover {
+    transform: scale(1.1);
+    color: #00aaff;
+  }
+  
+  /* Nav items list styling */
+  .nav-items {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  /* Nav item styling */
+  .nav-items li {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .nav-items a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar.dark .nav-items a {
+    color: #e2e8f0;
+  }
+  
+  .nav-items a:hover {
+    color: #00aaff;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .nav-items {
+      display: none;
+    }
+  
+    .navbar.dark .nav-items {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #1a202c;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-items.active {
+      display: flex;
+    }
+  
+    .nav-items li {
+      margin: 1rem 0;
+    }
+  }
+  
